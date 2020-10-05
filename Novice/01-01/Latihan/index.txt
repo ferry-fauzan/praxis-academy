@@ -7,3 +7,6 @@ kasus 1,2,3
 
 latihan
 latihan 1,2,3
+
+
+Git add
