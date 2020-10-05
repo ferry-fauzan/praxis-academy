@@ -1,9 +1,0 @@
-Buat instalan vscode
-Buat readme untuk penjelasan yang telah dilakukan
-
-Kasus
-kasus 1,2,3
-
-
-latihan
-latihan 1,2,3
