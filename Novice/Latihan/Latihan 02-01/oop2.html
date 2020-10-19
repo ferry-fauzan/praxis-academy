@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OBJECT ORIENTED PROGRAMMING</h1>
+    <script>
+        function Employee(level, dept) {
+            this.level = level;
+            this.dept = dept;
+        }
+
+        Employee.prototype.idn = function() {
+            return this.level + " " + this.dept;
+        }
+
+        let employee1 = new Employee("Staff", "Electrical Engineer");
+        let employee2 = new Employee("Spv", "Software Engineer");
+        document.writeln(employee1.idn() + "<br>");
+        document.write(employee2.idn());
+    </script>
+</body>
+
+</html>
