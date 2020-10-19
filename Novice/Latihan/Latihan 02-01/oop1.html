@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Prototype in Javascript</h1>
+
+    <script>
+        function Family(name, status, birth) {
+            this.name = name;
+            this.status = status;
+            this.birth = birth;
+        }
+
+        Family.prototype.age = function() {
+            document.write(`Umur ${this.name} sekarang:   ${2019 - this.birth}  <br>`)
+        }
+        console.log(Family.prototype);
+
+        let Bro1 = new Family("Luthfan", "Brother", 1999);
+        console.log(Bro1);
+        let Bro2 = new Family("Salwa", "Sister", 2000);
+        console.log(Bro2);
+
+        Bro1.age();
+        Bro2.age();
+    </script>
+</body>
+
+</html>
