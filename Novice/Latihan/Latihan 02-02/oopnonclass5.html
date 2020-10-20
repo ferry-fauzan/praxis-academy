@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Animal {
+            constructor(land, sea, air) {
+                this.land = land;
+                this.sea = sea;
+                this.air = air;
+            }
+            say() {
+                return `${this.air} is animal life in 1 place`;
+            }
+        }
+        class Amphi extends Animal {
+            say() {
+                super.say();
+                return `${this.land} is animal life in 1 place`
+            }
+        }
+
+        let spot = new Amphi('AB', 'CV', 'SD');
+        document.write(spot.say());
+
+        // class Animal {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        //     speak() {
+        //         console.log(this.name, 'speaks.');
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     speak() {
+        //         super.speak();
+        //         console.log(this.name, 'barks.');
+        //     }
+        // }
+
+        // let spot = new Dog('Spy');
+        // spot.speak();
+    </script>
+
+</body>
+
+</html>

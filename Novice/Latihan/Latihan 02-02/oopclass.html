@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OOP-CLASS</h1>
+    <script>
+        class House {
+            constructor(type, price, color) {
+                this.type = type;
+                this.price = price;
+                this.color = color;
+            }
+
+            getName() {
+                return this.type + " " + this.price;
+            }
+        }
+        class Villa extends House {
+            getName() {
+                return "The price of type " + this.type + "is " + this.price;
+
+            }
+        }
+
+        let villa = new House("41", 400000, "Grey");
+
+        console.log(villa.getName());
+        // class Vehicle {
+        //     constructor(make, model, color) {
+        //         this.make = make;
+        //         this.model = model;
+        //         this.color = color;
+        //     }
+
+        //     getName() {
+        //         return this.make + " " + this.model;
+        //     }
+        // }
+
+        // class Car extends Vehicle {
+        //     getName() {
+        //         return super.getName() + "  - called base class function from child class.";
+        //     }
+        // }
+
+        // let car = new Car("Honda", "Accord", "Purple");
+
+        // car.getName(); // "Honda Accord in child class."
+    </script>
+
+</body>
+
+</html>

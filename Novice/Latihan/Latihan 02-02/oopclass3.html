@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCRIpt>
+        class Idien {
+            constructor(num, hubb) {
+                this.num = num;
+                this.hubb = hubb;
+            }
+            greet() {
+                return `${this.num} you're hobb is ${this.hubb} <br>`;
+            }
+        }
+        class Born extends Idien {
+            constructor(num, hubb, born) {
+                super(num, hubb);
+                this.born = born;
+            }
+            greete() {
+                return `Hei ${this.num} i come from ${this.born}`
+            }
+        }
+
+        let idien = new Idien('Seek', 'Tenis');
+        let born = new Born('KI JANA', 'Snorkling', 'Cech')
+        document.write(idien.greet());
+        document.write(born.greete())
+    </script>
+</body>
+
+</html>
