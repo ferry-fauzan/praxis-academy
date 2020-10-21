@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURRYING</title>
+</head>
+
+<body>
+    <H1>Currying</H1>
+    <script>
+        function introduce(greeting) {
+            return function(name) {
+                return function(major) {
+                    return `${greeting}, ${name} from ${major}`
+                        // return greeting + name + " from" + major
+                }
+            }
+        }
+
+        let morning = introduce("Good Morning");
+        let evening = introduce("Good Evening");
+        let night = introduce("Good Night");
+
+
+        let budi = morning("Budi")("Engineerning-1");
+        let arum = night("Arum")("Agri Cultur-2")
+
+
+        document.write(`${budi} <br>`)
+        document.write(`${arum}`)
+    </script>
+
+</body>
+
+</html>

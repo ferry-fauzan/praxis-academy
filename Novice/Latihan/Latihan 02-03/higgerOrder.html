@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher-Order</title>
+</head>
+
+<body>
+    <h1>Higher Order</h1>
+    <script>
+        let divideBy2 = (a) => {
+            return a % 2 === 1
+        }
+
+        let arr = [5, 6, 7, 8, 9]
+
+        let divideNumb = arr.filter(divideBy2);
+
+        document.write(divideNumb);
+    </script>
+</body>
+
+</html>
