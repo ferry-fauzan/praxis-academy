@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let janjian = new Promise(
+            (resolve, reject) => {
+                if (2 > 1) {
+                    resolve(`2 is bigger than 1`)
+                } else {
+                    reject('1 is bigger')
+                }
+
+            })
+
+
+        janjian
+            .then((val) => {
+                console.log(val)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+        // const promise1 = new Promise((resolve, reject) => {
+        //     if (true) {
+        //         resolve("true");
+        //     } else {
+        //         reject("false");
+        //     }
+        // });
+
+        // promise1
+        //     .then((val) => {
+        //         console.log(val)
+        //     })
+        //     .catch((err) => {
+        //         console.log(err)
+        //     })
+    </script>
+</body>
+
+</html>
