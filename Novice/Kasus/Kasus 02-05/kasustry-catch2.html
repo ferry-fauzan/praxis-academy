@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Heii ini kasus dari eloquent js tentang try and catch</h1>
+    <script>
+        function kali(a, b) {
+            return a * b
+        }
+
+        function ihir(a, b) {
+            try {
+                //jika ingin coba kesalaha maka aktifkan let hasil yang telah disalahkan
+                // let hasi = kali(a, b)
+                let hasil = kali(a, b)
+                document.write(`Hasil dari perkalian anda adalah ${hasil}`)
+            } catch (err) {
+                alert('Kode Anda salah')
+            }
+
+        }
+
+        ihir(2, 2)
+    </script>
+
+
+</body>
+
+</html>
