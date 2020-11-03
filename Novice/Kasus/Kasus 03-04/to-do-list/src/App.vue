@@ -1,36 +1,25 @@
 <template>
   <div id="app">
-    <LC v-if="type"/>
-    <Hello :msg="message"/>
-    <button @click="type =!type">Destroy</button>
-    <Input/>
-    <div>
-      <p v-show="type">Guten Morgen</p>
-    </div>
+    <Hello/>
+    <h1>-----------------------------------------------------------------------</h1>
+    <!-- <cek/> -->
+    <New/>
   </div>
 </template>
 
 <script>
 import Hello from './components/HelloWorld.vue'
-import LC from './components/lifeCycle.vue'
-import Input from '@/components/input.vue'
-
+// import Cek from './components/cek.vue'
+import New from './components/new.vue'
 
 export default {
   name: 'App',
   components: {
     Hello,
-    LC,
-    Input
-  },
-
-  data: function(){
-    return{
-      type:true,
-      message:'Ini Props'
-    }
+    New,
+    // Cek
   }
-};
+}
 </script>
 
 <style>
