@@ -1,53 +1,58 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-
-    <h2>Add Task</h2>
-    <input v-model="newTask" type="text" placeholder="input some task"/>
-    <button @click="addTask">Add</button>
-
-    <h2>Todos Task</h2>
-    <ul v-for="(task, index) in tasks" :key="index">
-      <li>
-         {{editIndex !== index ? task : null}} 
-        <input v-if="editIndex === index" v-model="editInput" type="text"/>
-        <button @click="delTask(index)">Delete</button>
-        <button @click="saveEdit(index)" v-if="editIndex === index">Save</button>
-        <button v-if="editIndex !== index" @click="editTask(index)">Edit</button>
-      </li>
-    </ul>
+<div>
+   <v-carousel
+    cycle
+    height="400"
+    hide-delimiter-background
+    show-arrows-on-hover
+  >
+    <v-carousel-item
+      v-for="(slide, i) in slides"
+      :key="i"
+    >
+      <v-sheet
+        :color="colors[i]"
+        height="100%"
+      >
+        <v-row
+          class="fill-height"
+          align="center"
+          justify="center"
+        >
+          <div class="display-3">
+            {{ slide }} Slide
+          </div>
+        </v-row>
+      </v-sheet>
+    </v-carousel-item>
+  </v-carousel>
+  <!-- <div> -->
+<h1>{{$store.state.numb}}</h1>
   </div>
 </template>
 
 <script>
-  export default {
-    data: function(){
+ export default {
+    data () {
       return {
-        tasks: ["Makan", "Minum", "Makan"],
-        newTask: '',
-        editInput: '',
-        editIndex: true
+        colors: [
+          'indigo',
+          'warning',
+          'pink darken-2',
+          'red lighten-1',
+          'deep-purple accent-4',
+        ],
+        slides: [
+          'First',
+          'Second',
+          'Third',
+          'Fourth',
+          'Fifth',
+        ],
       }
     },
-    methods: {
-      addTask: function(){
-        this.tasks.push(this.newTask);
-      },
-      delTask: function(index){
-        this.tasks.splice(index, 1);
-      },
-      editTask: function(index){
-        this.editIndex = index;
-        this.editInput = this.tasks[index];
-        console.log(this.editIndex);
-        console.log(this.editInput);
-      },
-      saveEdit: function(index){
-        this.tasks[index] = this.editInput;
-        console.log(this.tasks);
-        this.editIndex = true;
-        console.log(this.editIndex)
-      }
-    }
+      computed: function(){
+    return this.$store.state.numb
+  }
   }
 </script>
